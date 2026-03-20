@@ -1447,7 +1447,7 @@ function UIMenu:GoRight()
         if Item() == "UIMenuListItem" then
             Item:Index(Item:Index() + 1)
             self.OnListChange(self, Item, Item._Index)
-            Item.OnListChanged(self, Item, Item._Index)
+            --Item.OnListChanged(self, Item, Item._Index)
         else
             local result = tostring(Item.Callback(Item, "right"))
             Item:CurrentListItem(result)
@@ -1690,7 +1690,7 @@ function UIMenu:ProcessMouse()
                                     if curr_select_item:Index() ~= value then
                                         curr_select_item:Index(value)
                                         self.OnListChange(self, curr_select_item, curr_select_item:Index())
-                                        curr_select_item.OnListChanged(self, curr_select_item, curr_select_item:Index())
+                                        --curr_select_item.OnListChanged(self, curr_select_item, curr_select_item:Index())
                                     else
                                         self:SelectItem(false)
                                     end

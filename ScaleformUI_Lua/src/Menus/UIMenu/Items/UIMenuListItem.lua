@@ -61,6 +61,7 @@ function UIMenuListItem:Index(Index)
         else
             self:CurrentListItem("")
         end
+        self.OnListChanged(self.Parent, self, self._Index)
     else
         return self._Index
     end
